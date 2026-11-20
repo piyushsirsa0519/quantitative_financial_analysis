@@ -1,0 +1,31 @@
+[package]
+name = "nautilus-cryptography"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "TLS configuration and cryptographic provider management for the Nautilus trading engine"
+categories.workspace = true
+keywords.workspace = true
+documentation.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[lints]
+workspace = true
+
+[lib]
+name = "nautilus_cryptography"
+crate-type = ["rlib"]
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+log = { workspace = true }
+rustls = { workspace = true }
+webpki-roots = { workspace = true }
+
+[dev-dependencies]
+rstest = { workspace = true }
